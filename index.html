@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Louell Sala | Healthcare AI & Data Science</title>
+  <meta name="description" content="Lou Sala - healthcare data and analytics professional, health informatics graduate candidate, physician, and AI builder." />
+  <style>
+    :root {
+      --bg: #061826;
+      --text: #f8fafc;
+      --muted: #b7c4d4;
+      --card: #0f2437;
+      --accent: #22d3ee;
+      --accent2: #a78bfa;
+      --accent3: #34d399;
+      --gold: #fbbf24;
+      --border: rgba(255, 255, 255, .13);
+      --shadow: rgba(0, 0, 0, .28)
+    }
+  
+    * {
+      box-sizing: border-box
+    }
+  
+    html {
+      scroll-behavior: smooth
+    }
+  
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(34, 211, 238, .34) 0, transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(167, 139, 250, .32) 0, transparent 30%),
+        radial-gradient(circle at 50% 95%, rgba(52, 211, 153, .18) 0, transparent 28%),
+        var(--bg);
+      line-height: 1.6
+    }
+  
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 800
+    }
+  
+    a:hover {
+      text-decoration: underline
+    }
+  
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px
+    }
+  
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 0 54px
+    }
+  
+    .brand {
+      font-weight: 950;
+      letter-spacing: -.04em;
+      font-size: 1.18rem;
+      color: white
+    }
+  
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .95rem
+    }
+  
+    nav a {
+      color: #dbeafe
+    }
+  
+    /* HERO */
+    .hero {
+      min-height: 68vh;
+      display: grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap: 42px;
+      align-items: center;
+      padding: 24px 0 70px
+    }
+  
+    .eyebrow {
+      display: inline-flex;
+      color: var(--gold);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      margin-bottom: 18px
+    }
+  
+    /* 🔥 NEW GRADIENT TEXT SYSTEM */
+    .gradient-text {
+      background: linear-gradient(90deg, #fff, #67e8f9 45%, #c4b5fd 85%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  
+    /* 🔥 HERO TITLE (replaces h1 size) */
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      letter-spacing: -.03em;
+      line-height: 1.15;
+      margin: 0 0 20px 0;
+    }
+  
+    /* Remove old h1 styling (optional cleanup) */
+    /* .hero h1 {...} */
+  
+    .hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.23rem;
+      margin: 26px 0 0
+    }
+  
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0 0
+    }
+  
+    .tag {
+      background: rgba(34, 211, 238, .12);
+      border: 1px solid rgba(34, 211, 238, .35);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: .9rem;
+      font-weight: 850;
+      color: #e0faff;
+      backdrop-filter: blur(6px)
+    }
+  
+    .hero-card {
+      background: linear-gradient(145deg, rgba(15, 36, 55, .92), rgba(17, 24, 39, .72));
+      border: 1px solid rgba(34, 211, 238, .26);
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: 0 24px 70px rgba(34, 211, 238, .16);
+      backdrop-filter: blur(10px)
+    }
+  
+    .avatar {
+      width: 120px;
+      height: 120px;
+      max-width:120px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 22px;
+
+  /* Clean border */
+  border:2px solid rgba(34,211,238,.4);
+
+  /* Glow + depth */
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,.05),
+    0 12px 30px rgba(34,211,238,.25);
+
+  /* Smooth animation */
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.avatar:hover{
+  transform: translateY(-4px) scale(1.03);
+
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,.08),
+    0 20px 50px rgba(34,211,238,.45);
+}
+  
+.hero-card h2 {
+      text-align: center;
+      margin: 0 0 6px;
+      font-size: 1.18rem
+    }
+  
+    .hero-card p {
+      text-align: center;
+      color: #cbd5e1;
+      font-size: .96rem;
+      margin: 0
+    }
+  
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px
+    }
+  
+    .button {
+      display: inline-block;
+      padding: 13px 17px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #061826;
+      border: 0;
+      font-weight: 950;
+      box-shadow: 0 12px 28px rgba(34, 211, 238, .22)
+    }
+  
+    .button.secondary {
+      background: rgba(255, 255, 255, .08);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, .18);
+      box-shadow: none
+    }
+  
+    /* SECTIONS */
+    section {
+      padding: 54px 0
+    }
+  
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 22px
+    }
+  
+    /* 🔥 SECTION TITLES NOW GRADIENT */
+    .section-title {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      background: linear-gradient(90deg, #fff, #67e8f9 45%, #c4b5fd 85%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  
+    .section-note {
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0;
+      font-size: .98rem
+    }
+  
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px
+    }
+  
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr)
+    }
+  
+    .card {
+      background: linear-gradient(180deg, rgba(15, 36, 55, .92), rgba(15, 36, 55, .72));
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .18);
+      backdrop-filter: blur(8px)
+    }
+  
+    .card.featured {
+      grid-column: span 2;
+      border-color: rgba(251, 191, 36, .35);
+      box-shadow: 0 22px 60px rgba(251, 191, 36, .08)
+    }
+  
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      letter-spacing: -.03em
+    }
+  
+    .card p,
+    .card li {
+      color: #cbd5e1;
+      font-size: .98rem
+    }
+  
+    .project-meta {
+      color: var(--gold);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 950;
+      margin-bottom: 10px
+    }
+  
+    .links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px
+    }
+  
+    .mini-link {
+      border: 1px solid rgba(34, 211, 238, .35);
+      background: rgba(34, 211, 238, .1);
+      color: #a5f3fc;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: .82rem;
+      font-weight: 950
+    }
+  
+    /* EXPERIENCE */
+    .experience {
+      display: grid;
+      gap: 14px
+    }
+  
+    .role {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: linear-gradient(90deg, rgba(15, 36, 55, .92), rgba(15, 36, 55, .62))
+    }
+  
+    .role strong {
+      display: block;
+      font-size: 1.05rem;
+      color: white
+    }
+  
+    .role span {
+      display: block;
+      color: #93c5fd;
+      margin-top: 4px;
+      font-size: .92rem
+    }
+  
+    .role p {
+      color: #cbd5e1;
+      margin: 0
+    }
+  
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+  
+    .skill {
+      padding: 9px 12px;
+      border: 1px solid rgba(167, 139, 250, .35);
+      background: rgba(167, 139, 250, .12);
+      color: #ede9fe;
+      border-radius: 999px;
+      font-size: .92rem;
+      font-weight: 850
+    }
+  
+    /* CONTACT */
+    .contact-card {
+      background: linear-gradient(135deg, #0f172a, #0f766e 55%, #2563eb);
+      color: white;
+      border-radius: 34px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 24px 70px rgba(34, 211, 238, .18)
+    }
+  
+    .contact-card h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -.02em
+    }
+  
+    .contact-card p {
+      color: #d1d5db;
+      margin: 14px 0 0
+    }
+  
+    .contact-card a {
+      color: #99f6e4
+    }
+  
+    /* FOOTER */
+    footer {
+      padding: 34px 0;
+      color: #94a3b8;
+      font-size: .92rem;
+      text-align: center
+    }
+  
+    /* RESPONSIVE */
+    /* === ADD HERE === */
+.card,
+.role,
+.hero-card,
+.button,
+.mini-link,
+.tag,
+.skill {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.card:hover,
+.role:hover,
+.hero-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 70px rgba(34,211,238,.16);
+  border-color: rgba(34,211,238,.35);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(34,211,238,.32);
+  text-decoration: none;
+}
+
+.button.secondary:hover,
+.mini-link:hover {
+  background: rgba(34,211,238,.18);
+  border-color: rgba(34,211,238,.55);
+  text-decoration: none;
+}
+
+.tag:hover,
+.skill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(251,191,36,.45);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero,
+section {
+  animation: fadeUp .7s ease both;
+}
+
+    @media(max-width:880px) {
+  
+      header,
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column
+      }
+  
+      .hero,
+      .grid,
+      .grid.two,
+      .recognition,
+      .contact-card,
+      .role {
+        grid-template-columns: 1fr
+      }
+  
+      .hero {
+        min-height: auto;
+        padding-top: 10px
+      }
+  
+      .card.featured {
+        grid-column: span 1
+      }
+  
+      .container {
+        padding: 20px
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Louell Sala</div>
+      <nav>
+        <a href="#work">Work</a><a href="#experience">Experience</a><a href="#recognition">Recognition</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Health Informatics</div>
+        <h2 class="gradient-text hero-title"> Turning healthcare data into decisions</h2>
+          <p>Data analytics professional and Health Informatics graduate candidate at Weill Cornell Medicine with 10+ years of clinical experience. I specialize in transforming complex clinical and operational data into actionable insights, with experience in AI, analytics, and applied machine learning.</p>
+          <div class="tags"><span class="tag">Physician</span><span class="tag">Health Informatics</span><span class="tag">Machine Learning</span><span class="tag">Clinical Data</span></div>
+          <div class="buttons"><a class="button" href="#work">View Work</a><a class="button secondary" href="mailto:louell_sala@yahoo.com">Contact</a></div>
+        </div>
+        <aside class="hero-card">
+          <img src="images/profile.jpeg" alt="L S" class="avatar"><h2>Louell Sala</h2><p>Health Informatics  </p>
+          <div class="links" style="justify-content:center;"><a class="mini-link" href="https://www.linkedin.com/in/louells/" target="_blank">LinkedIn</a><a class="mini-link" href="https://github.com/Alchemist21" target="_blank">GitHub</a><a class="mini-link" href="https://www.youtube.com/@TechnologyTrainor" target="_blank">YouTube</a></div>
+        </aside>
+      </section>
+
+      <section id="work">
+        <div class="section-header"><h2 class="section-title">Selected Work</h2><p class="section-note">A curated set of projects across healthcare AI, accessibility, NLP, geospatial analytics, and applied data systems.</p></div>
+        <div class="grid">
+          <article class="card featured"><div class="project-meta">AI for Accessibility</div><h3>Benvision</h3><p>Built a computer vision and soundscape-based navigation system designed to help visually impaired users understand and move through physical environments. The project reflects my interest in human-centered AI: not just building models, but turning them into tools people can actually use.</p><div class="links"><a class="mini-link" href="https://devpost.com/software/benvision" target="_blank">View Project</a></div></article>
+          <article class="card"><div class="project-meta">Healthcare Data</div><h3>OMOP Health & Environment Analysis</h3><p>Developed a ZIP-code level geospatial analysis linking PM2.5 exposure, income, data center proximity, and asthma burden using an OMOP-informed relational framework.</p></article>
+          <article class="card"><div class="project-meta">Clinical NLP</div><h3>NLP for Suicide Risk Detection</h3><p>Analyzed the use of NLP and generative AI for early detection of suicide risk in psychiatric clinical notes and social media data.</p></article>
+          <article class="card"><div class="project-meta">Contract AI</div><h3>PowerIQ</h3><p>AI-powered risk detector for energy contracts, focused on identifying risk signals from complex contract language.</p><div class="links"><a class="mini-link" href="https://github.com/Alchemist21/PowerIQ" target="_blank">GitHub</a></div></article>
+          <article class="card"><div class="project-meta">Applied AI</div><h3>LambCo Site Selector</h3><p>AI-powered site selector platform that identifies optimal sites overlapping acetic acid production facilities and chemical production facilities.</p><div class="links"><a class="mini-link" href="https://lambco.netlify.app/" target="_blank">View Project</a></div></article>
+          <article class="card"><div class="project-meta">Geospatial Systems</div><h3>Spatial</h3><p>Platform enabling research scientists to build geospatial maps connected to real-time Chainlink weather oracles through MetaMask.</p><div class="links"><a class="mini-link" href="https://spatialoracles-8b65a.web.app/" target="_blank">View Project</a></div></article>
+          <article class="card"><div class="project-meta">Machine Learning</div><h3>Lung Cancer Prediction</h3><p>Simple machine learning project exploring predictive modeling for lung cancer classification and risk-oriented analysis.</p><div class="links"><a class="mini-link" href="https://github.com/Alchemist21/mLungCa" target="_blank">GitHub</a></div></article>
+          <article class="card"><div class="project-meta">Additional Builds</div><h3>Web3, Health, and Teaching Projects</h3><p>Additional work includes Fractio, Pixieland, DIGID, THEO, Blockchain for Clinical Trials, and technical lectures in sentiment analysis and blockchain.</p><div class="links"><a class="mini-link" href="https://github.com/Alchemist21/Clinical_Trial_Starter" target="_blank">Clinical Trials</a><a class="mini-link" href="https://alchemist21.github.io/Senti/" target="_blank">Sentiment Lecture</a><a class="mini-link" href="https://alchemist21.github.io/blockchainlecture/" target="_blank">Blockchain Lecture</a></div></article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-header"><h2 class="section-title">Experience</h2><p class="section-note">Clinical depth, data practice, product building, and community-facing technology work.</p></div>
+        <div class="experience">
+          <div class="role"><div><strong>Technology Training Coordinator</strong><span>New York Public Library · 2023–Present</span></div><p>Analyze engagement data to improve digital literacy programs serving diverse communities, support high-impact events, and identify trends that inform service delivery.</p></div>
+          <div class="role"><div><strong>Co-Founder & AI Product Developer</strong><span>Independent Ventures · 2017–2022</span></div><p>Co-founded and built AI and blockchain-based products, including agentic cybersecurity systems and Ethereum-based decentralized applications. Contributed to platforms reaching 3,000+ users and secured accelerator and grant support.</p></div>
+          <div class="role"><div><strong>Medical Scientific Liaison</strong><span>AstraZeneca / Mundipharma · 2015–2017</span></div><p>Led data-driven stakeholder partnerships, supported regulatory and access initiatives, facilitated clinical discussions, and trained 100+ sales associates with metrics-based feedback.</p></div>
+          <div class="role"><div><strong>Physician</strong><span>Hospital and Occupational Health Settings · 2008–2017</span></div><p>Delivered primary and preventive care to 40–80 patients daily, building deep expertise in clinical workflows, patient care, and healthcare operations.</p></div>
+        </div>
+      </section>
+
+      <section id="recognition">
+        <div class="section-header"><h2 class="section-title">Recognition</h2><p class="section-note">Selected awards and mentorship activities across healthcare innovation, AI, and emerging technologies.</p></div>
+        <div class="recognition">
+          <div class="card"><h3>Selected Awards</h3><ul><li> Massachusetts Institute of Technology (MIT) Reality Hack — Winner (2023)</li><li>Massachusetts Institute of Technology (MIT) Hacking Medicine — First Place (2022)</li><li>Chainlink Fall Hackathon — Winner (2022)</li><li>Hedera Hackathon — Winner (2022)</li><li>Protocol Labs / ETHGlobal — Winner (2021)</li></ul><p><strong>+ additional awards</strong> across AI, Web3, data, security, and healthcare innovation.</p></div>
+          <br>
+          <div class="card"><h3>Mentorship & Teaching</h3><ul><li>Judge, City University of New York (CUNY) New Venture Accelerator (2026)</li>
+          <li>Mentor, Massachusetts Institute of Technology (MIT) Reality Hack (2025)</li><li>Mentor, City University of New York (CUNY) New Venture Accelerator (2025)</li><li>Technology training and digital literacy instruction through the New York Public Library</li></ul></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-header"><h2 class="section-title">About</h2><p class="section-note">Physician background. Data systems mindset. Builder orientation.</p></div>
+        <div class="grid two">
+          <div class="card"><h3>Focus</h3><p>My work sits at the intersection of clinical medicine, data science, and applied AI. I am particularly interested in using AI to make complex, unstructured data more usable in real-world environments, improving decision-making in healthcare and operational systems.</p></div>
+          <div class="card"><h3>Skills</h3><div class="skills"><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">Machine Learning</span><span class="skill">Statistical Modeling</span><span class="skill">Predictive Analytics</span><span class="skill">Healthcare Data</span><span class="skill">Real-World Evidence</span><span class="skill">FHIR / HL7</span><span class="skill">HIPAA</span><span class="skill">Epic EHR</span><span class="skill">Data Visualization</span></div></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact-card"><div><h2>Build useful systems from complex data.</h2></div><div><p><strong>Email</strong><br><a href="mailto:louell_sala@yahoo.com">louell_sala@yahoo.com</a></p><p><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/louells/" target="_blank">linkedin.com/in/louells</a></p><p><strong>GitHub</strong><br><a href="https://github.com/Alchemist21" target="_blank">github.com/Alchemist21</a></p></div></div>
+      </section>
+    </main>
+    <footer>© 2026 Louell Sala. Built with GitHub Pages.</footer>
+  </div>
+</body>
+</html>
